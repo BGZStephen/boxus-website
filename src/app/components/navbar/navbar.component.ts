@@ -8,6 +8,7 @@ import { Component, OnInit } from "@angular/core";
 export class Navbar implements OnInit {
   navVisible: boolean = false;
   navHeight: number = 0;
+  navElementHeight: number = 0;
   activeNavItem: object = {
     label: "Home",
     id: "home",
@@ -66,7 +67,7 @@ export class Navbar implements OnInit {
   checkForColorchange = (): void => {
     for (const navItem of this.navItems) {
       const elementOffset = document.getElementById(navItem.id).offsetTop;
-      if (window.pageYOffset + this.navHeight >= elementOffset) {
+      if (window.pageYOffset + this.navElementHeight >= elementOffset) {
         this.activeNavItem = navItem;
       }
     }
@@ -78,6 +79,7 @@ export class Navbar implements OnInit {
   }
 
   setNavHeight = (): void => {
+    this.navElementHeight = 51;
     if(screen.width < 1024 && this.navVisible) {
       this.navHeight = 51 * this.navItems.length;
     }
@@ -87,6 +89,7 @@ export class Navbar implements OnInit {
     }
 
     if(screen.width > 1024) {
+      this.navElementHeight = 64;
       this.navHeight = 64;
     }
   }
@@ -99,6 +102,6 @@ export class Navbar implements OnInit {
 
   scrollTo = (reference: string): void => {
     const elementPosition = document.getElementById(reference).offsetTop;
-    window.scrollTo({left: 0, top: (elementPosition - this.navHeight), behavior: 'smooth'});
+    window.scrollTo({left: 0, top: (elementPosition - this.navElementHeight), behavior: 'smooth'});
   }
 }
