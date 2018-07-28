@@ -6,6 +6,14 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ['./navbar.component.scss']
 })
 export class Navbar implements OnInit {
+  navVisible: boolean = false;
+  navHeight: number = 0;
+  activeNavItem: object = {
+    label: "Home",
+    id: "home",
+    bgColor: "purple",
+  }
+
   bgColor: string = "purple";
   navItems: Array<any> = [
     {
@@ -52,14 +60,45 @@ export class Navbar implements OnInit {
 
   ngOnInit(): void {
     window.addEventListener('scroll', this.checkForColorchange, true);
+    this.setNavHeight();
   }
 
   checkForColorchange = (): void => {
     for (const navItem of this.navItems) {
       const elementOffset = document.getElementById(navItem.id).offsetTop;
-      if (window.pageYOffset + 56 >= elementOffset) {
-        this.bgColor = navItem.bgColor
+      if (window.pageYOffset + this.navHeight >= elementOffset) {
+        this.activeNavItem = navItem;
       }
     }
+  }
+
+  toggleNavVisible = (): void => {
+    this.navVisible = !this.navVisible;
+    this.setNavHeight();
+  }
+
+  setNavHeight = (): void => {
+    if(screen.width < 1024 && this.navVisible) {
+      this.navHeight = 51 * this.navItems.length;
+    }
+
+    if(screen.width < 1024 && !this.navVisible) {
+      this.navHeight = 0;
+    }
+
+    if(screen.width > 1024) {
+      this.navHeight = 64;
+    }
+  }
+
+  getNavHeight = (): object => {
+    return {
+      "height": `${this.navHeight}px`,
+    };
+  }
+
+  scrollTo = (reference: string): void => {
+    const elementPosition = document.getElementById(reference).offsetTop;
+    window.scrollTo({left: 0, top: (elementPosition - this.navHeight), behavior: 'smooth'});
   }
 }

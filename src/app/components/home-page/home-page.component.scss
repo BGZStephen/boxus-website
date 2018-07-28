@@ -1,28 +1,21 @@
 @import '../../styles/variables';
 
 :host {
-  #home {
-    min-height: 200px;
+  > .container {
+    padding-top: 56px;
+
+    @media(min-width: $screen-md) {
+      padding-top: 64px;
+    }
   }
-  #services {
-    min-height: 200px;
-  }
-  #portfolio {
-    min-height: 200px;
-  }
-  #about {
-    min-height: 200px;
-  }
-  #news {
-    min-height: 200px;
-  }
-  #video {
-    min-height: 200px;
-  }
-  #skills {
-    min-height: 200px;
-  }
+  #home,
+  #services,
+  #portfolio,
+  #about,
+  #news,
+  #video,
+  #skills,
   #contact {
-    min-height: 200px;
+    min-height: 100vh;
   }
 }

@@ -1,8 +1,8 @@
-<div class="navbar-container container--{{bgColor}}">
-  <span class="visible-sm">Menu</span>
-  <nav class="container--{{bgColor}}">
+<div class="navbar-container container--{{activeNavItem.bgColor}}" (window:resize)="setNavHeight()">
+  <span class="visible-sm" (click)="toggleNavVisible()">Menu</span>
+  <nav class="container--{{activeNavItem.bgColor}}" [ngStyle]="getNavHeight()">
     <ul>
-      <li *ngFor="let navItem of navItems">
+      <li (click)="scrollTo(navItem.id)" [ngClass]="{active: activeNavItem.id === navItem.id}" *ngFor="let navItem of navItems">
         {{navItem.label}}
       </li>
     </ul>
