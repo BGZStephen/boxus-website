@@ -1,0 +1,33 @@
+.icon {
+  height: 50px;
+  width: 50px;
+}
+
+.icon-navigation-right {
+  background-image: url('/assets/icons/navigation_arrows_right.svg');
+  background-clip: border-box;
+}
+
+.icon-square {
+  background-image: url('/assets/icons/icon_01.png');
+  background-size: contain;
+  background-clip: border-box;
+}
+
+.icon-triangle {
+  background-image: url('/assets/icons/icon_02.png');
+  background-size: contain;
+  background-clip: border-box;
+}
+
+.icon-circle {
+  background-image: url('/assets/icons/icon_03.png');
+  background-size: contain;
+  background-clip: border-box;
+}
+
+.icon-cross {
+  background-image: url('/assets/icons/icon_04.png');
+  background-size: contain;
+  background-clip: border-box;
+}

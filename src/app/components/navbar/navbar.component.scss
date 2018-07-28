@@ -9,6 +9,7 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 5;
 
     &.container--green,
     &.container--orange,
@@ -28,7 +29,6 @@
       font-weight: bold;
       text-transform: uppercase;
       width: 100%;
-      z-index: 5;
 
       @media(min-width: $screen-md) {
         top: -56px;
@@ -43,8 +43,10 @@
       transition: 0.3s ease background,
                   0.2s ease height
                   0.3s ease position;
-
       ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         li {
           display: flex;
           align-items: center;
@@ -71,8 +73,13 @@
         }
 
         @media(min-width: $screen-md) {
+          flex-direction: row;
           max-width: 768px;
           margin: 0 auto;
+        }
+
+        @media(min-width: $screen-lg) {
+          max-width: 1200px;
         }
       }
 

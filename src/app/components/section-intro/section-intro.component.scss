@@ -42,6 +42,11 @@
         font-size: 22px;
       }
     }
+
+    @media(min-width: $screen-lg) {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
   }
 
   @media(min-width: $screen-md) {

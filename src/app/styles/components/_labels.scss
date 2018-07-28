@@ -1,0 +1,16 @@
+.label {
+  width: 100%;
+  position: relative;
+}
+
+.label--green {
+  background: $brand-green;
+}
+
+.label--orange {
+  background: $brand-orange;
+}
+
+.label--pink {
+  background: $brand-pink;
+}
