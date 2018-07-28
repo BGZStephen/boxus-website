@@ -57,7 +57,8 @@
           width: 100%;
           transition: 0.1s ease color;
 
-          &.active {
+          &.active,
+          &:hover {
             color: white;
           }
 

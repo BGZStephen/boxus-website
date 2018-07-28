@@ -103,5 +103,9 @@ export class Navbar implements OnInit {
   scrollTo = (reference: string): void => {
     const elementPosition = document.getElementById(reference).offsetTop;
     window.scrollTo({left: 0, top: (elementPosition - this.navElementHeight), behavior: 'smooth'});
+    if (this.navVisible) {
+      this.navVisible = false;
+      this.setNavHeight();
+    }
   }
 }

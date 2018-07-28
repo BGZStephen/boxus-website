@@ -11,6 +11,7 @@ import * as components from '../../components';
     components.HomePage,
     components.WorkExample,
     components.Navbar,
+    components.SectionIntro,
   ],
   imports: [
     BrowserModule,
