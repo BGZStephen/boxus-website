@@ -1,0 +1,10 @@
+<div class="navbar-container container--{{bgColor}}">
+  <span class="visible-sm">Menu</span>
+  <nav class="container--{{bgColor}}">
+    <ul>
+      <li *ngFor="let navItem of navItems">
+        {{navItem.label}}
+      </li>
+    </ul>
+  </nav>
+</div>

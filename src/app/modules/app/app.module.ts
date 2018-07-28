@@ -9,6 +9,8 @@ import * as components from '../../components';
   declarations: [
     components.App,
     components.HomePage,
+    components.WorkExample,
+    components.Navbar,
   ],
   imports: [
     BrowserModule,

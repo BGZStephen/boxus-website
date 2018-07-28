@@ -1,0 +1,28 @@
+@import '../../styles/variables';
+
+:host {
+  #home {
+    min-height: 200px;
+  }
+  #services {
+    min-height: 200px;
+  }
+  #portfolio {
+    min-height: 200px;
+  }
+  #about {
+    min-height: 200px;
+  }
+  #news {
+    min-height: 200px;
+  }
+  #video {
+    min-height: 200px;
+  }
+  #skills {
+    min-height: 200px;
+  }
+  #contact {
+    min-height: 200px;
+  }
+}

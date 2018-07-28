@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
 })
 export class App {
-  title = 'boxus-website';
+  title: string = 'boxus-website';
 }

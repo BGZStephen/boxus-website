@@ -1,0 +1,27 @@
+.container {
+
+}
+
+.container--purple {
+  background: $brand-purple;
+  color: $font-white;
+  transition: 0.3s ease all;
+}
+
+.container--green {
+  background: $brand-green;
+  color: $font-white;
+  transition: 0.3s ease all;
+}
+
+.container--orange {
+  background: $brand-orange;
+  color: $font-white;
+  transition: 0.3s ease all;
+}
+
+.container--pink {
+  background: $brand-pink;
+  color: $font-white;
+  transition: 0.3s ease all;
+}
