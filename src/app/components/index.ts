@@ -9,3 +9,4 @@ export { SectionAbout } from './section-about/section-about.component';
 export { SectionNews } from './section-news/section-news.component';
 export { SectionVideos } from './section-videos/section-videos.component';
 export { SectionSkills } from './section-skills/section-skills.component';
+export { SectionContact } from './section-contact/section-contact.component';

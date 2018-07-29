@@ -18,6 +18,7 @@ import * as components from '../../components';
     components.SectionNews,
     components.SectionVideos,
     components.SectionSkills
+    components.SectionContact
   ],
   imports: [
     BrowserModule,
