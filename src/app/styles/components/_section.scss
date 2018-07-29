@@ -5,8 +5,11 @@
 #section-portfolio,
 #section-about,
 #section-news,
+#section-videos,
 #section-contact,
 #section-skills {
+  background: $brand-purple;
+
   > .content {
     max-width: 900px;
     margin: 0 auto;
