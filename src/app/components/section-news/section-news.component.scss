@@ -1,0 +1,126 @@
+@import '../../styles/base/variables';
+
+#section-news {
+  background: $brand-purple;
+  background-image: url('/assets/images/background_img_04.jpg');
+  background-size: cover;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 160px;
+  width: 100%;
+  
+  > .content {
+    width: 100%;
+    .container-md-30 {
+      order: 0;
+      .label {
+        p {
+          color: darken($brand-green, 15%);
+        }
+
+        @media(min-width: $screen-md) {
+          position: sticky;
+          top: 64px;
+        }
+      }
+
+      @media(min-width: $screen-md) {
+        order: 1;
+      }
+    }
+
+    .container-md-70 {
+      order: 1;
+      > .content {
+        .list-container {
+          background: white;
+          color: $brand-purple;
+          padding: 30px 15px;
+          width: 100%;
+          .list-item {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 35px 0;
+            border-bottom: 2px solid #EEE;
+
+            .number-container {
+              color: $brand-green;
+              font-size: 48px;
+              font-family: $font-family-heading;
+              font-weight: bolder;
+              width: 80px;
+            }
+            
+            .title-container {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+
+              p {
+                margin-bottom: 5px;
+              }
+
+              span {
+                font-size: 10px;
+              }
+
+              span.pink {
+                color: $brand-pink;
+              }
+
+              width: calc(100% - 80px);
+              @media(min-width: $screen-md) {  
+                width: calc(50% - 80px);
+              }
+            }
+            
+            .description-container {
+              display: flex;
+              align-items: center;
+              margin-top: 15px;
+              width: 100%;
+
+              p {
+                font-weight: bolder;
+              }
+
+              @media(min-width: $screen-md) {  
+                margin-top: 0px;
+                width: 50%;
+              }
+            }
+
+            &:last-of-type {
+              border-bottom: none;
+            }
+
+            @media(min-width: $screen-md) {
+              flex-wrap: nowrap  
+            }
+          }
+
+          @media(min-width: $screen-md) {
+            padding: 55px;
+          }
+        }
+      }
+      @media(min-width: $screen-md) {
+        order: 0;
+      }
+    }
+
+    @media(min-width: $screen-md) {
+      flex-direction: row;
+    }
+
+    @media(min-width: $screen-lg) {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+
+  @media(min-width: $screen-md) {
+    padding-bottom: 0;
+  }
+}

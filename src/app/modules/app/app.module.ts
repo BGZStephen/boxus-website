@@ -15,6 +15,7 @@ import * as components from '../../components';
     components.SectionServices,
     components.SectionPortfolio,
     components.SectionAbout,
+    components.SectionNews
   ],
   imports: [
     BrowserModule,
