@@ -1,0 +1,30 @@
+@import '../../styles/base/variables';
+
+#footer {
+  background: $brand-purple;
+  color: rgba(255, 255, 255, .5);
+  padding: 0 20px;
+  text-align: center;
+
+  p {
+    margin-bottom: 15px;
+  }
+
+  .social-container {
+    display: flex;
+    justify-content: center;
+
+    i {
+      cursor: pointer;
+      padding: 5px;
+      margin: 0 5px;
+      transition: 0.2s ease all;
+
+      &:hover {
+        color: $brand-pink;
+      }
+    }
+  }
+
+  padding-bottom: 100px;
+}

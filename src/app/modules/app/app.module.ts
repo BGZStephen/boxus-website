@@ -11,13 +11,14 @@ import * as components from '../../components';
     components.HomePage,
     components.WorkExample,
     components.Navbar,
+    components.Footer,
     components.SectionIntro,
     components.SectionServices,
     components.SectionPortfolio,
     components.SectionAbout,
     components.SectionNews,
     components.SectionVideos,
-    components.SectionSkills
+    components.SectionSkills,
     components.SectionContact
   ],
   imports: [
