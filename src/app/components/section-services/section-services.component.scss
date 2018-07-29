@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@import '../../styles/base/variables';
 
 #section-services {
   display: flex;
@@ -8,65 +8,10 @@
   width: 100%;
 
   .content {
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
-
     .container-md-30 {
       .label {
-        align-items: center;
-        display: flex;
-        overflow: hidden;
-        
         p {
-          position: relative;
-          left: -5px;
-          font-size: 38px;
-          letter-spacing: -5px;
           color: darken($brand-green, 15%);
-          margin: 5px 0;
-
-          @media(min-width: $screen-sm) {
-            font-size: 44px;
-          }
-
-          @media(min-width: $screen-md) {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-weight: bolder;
-            font-size: 72px;
-          }
-
-          @media(min-width: $screen-lg) {
-            font-size: 92px;
-          }
-        }
-  
-        h2 {
-          color: white;
-          font-size: 38px;
-          text-transform: uppercase;
-
-          @media(min-width: $screen-sm) {
-            font-size: 44px;
-          }
-
-          @media(min-width: $screen-md) {
-            position: absolute;
-            top: 70%;
-            right: 10px;
-            font-size: 72px;
-            word-wrap: break-word;
-            font-weight: lighter;
-            line-height: .8;
-            width: 160px;
-          }
-          
-          @media(min-width: $screen-lg) {
-            width: 200px;
-            font-size: 92px;
-          }
         }
   
         .icon-navigation-right {
@@ -79,20 +24,6 @@
             display: none;
           }
         }
-  
-        @media(min-width: $screen-md) {
-          height: 270px;
-          overflow: visible;
-        }
-  
-        @media(min-width: $screen-lg) {
-          height: 360px;
-        }
-      }
-
-      @media(min-width: $screen-md) {
-        position: sticky;
-        top: 64px;
       }
     }
 
@@ -148,14 +79,6 @@
         @media(min-width: $screen-md) {
           padding: 55px;
         }
-      }
-
-      @media(min-width: $screen-md) {        
-        padding-top: 270px;
-      }
-  
-      @media(min-width: $screen-lg) {
-        padding-top: 360px;
       }
     }
 
