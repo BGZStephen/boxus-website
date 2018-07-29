@@ -13,6 +13,7 @@ import * as components from '../../components';
     components.Navbar,
     components.SectionIntro,
     components.SectionServices,
+    components.SectionPortfolio,
   ],
   imports: [
     BrowserModule,
