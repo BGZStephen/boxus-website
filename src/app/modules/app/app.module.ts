@@ -12,6 +12,7 @@ import * as components from '../../components';
     components.WorkExample,
     components.Navbar,
     components.Footer,
+    components.ImageSlider,
     components.SectionIntro,
     components.SectionServices,
     components.SectionPortfolio,

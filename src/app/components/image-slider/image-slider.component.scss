@@ -1,0 +1,58 @@
+@import '../../styles/base/variables';
+
+#image-slider {
+  display: none;
+  padding: 80px 0;
+  position: relative;
+  width: 100%;
+  background: $brand-purple;
+  overflow: hidden;
+
+  .slider-container {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    transition: 0.3s ease all;
+  }
+
+  .slide-selector {
+    display: flex;
+    justify-content: center;
+
+    .selector {
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    i {
+      color: white;
+      font-size: 36px;
+    }
+  }
+
+  @media(min-width: $screen-md) {
+    display: block;
+
+    .slider-image {
+      margin: 0 40px;
+      padding: 40px;
+      width: 25%;
+
+      img {
+        width: 75%;
+      }
+    }
+  }
+
+  @media(min-width: $screen-lg) {
+    .slider-image {
+      margin: 0 75px;
+      padding: 75px;
+      width: 25%;
+
+      img {
+        width: 75%;
+      }
+    }
+  }
+}

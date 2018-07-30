@@ -1,0 +1,15 @@
+<div id="image-slider">
+  <div class="slider-container" [ngStyle]="getSliderStyle()">
+    <div class="slider-image" *ngFor="let image of images">
+      <img src="{{image}}">
+    </div>
+  </div>
+  <div class="slide-selector">
+    <div class="selector" (click)="nextSlide(0)">
+      <i class="{{activeImage === 0 ? 'far' : 'fa'}} fa-circle"></i>
+    </div>
+    <div class="selector" (click)="nextSlide(3)">
+      <i class="{{activeImage === 3 ? 'far' : 'fa'}} fa-circle"></i>
+    </div>
+  </div>
+</div>
