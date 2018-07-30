@@ -112,6 +112,35 @@
       }
     }
 
+    .quote-container {
+      margin-top: 160px;
+      padding: 0 50px;
+      color: white;
+      width: 100%;
+      
+      .text-body {
+        font-size: 22px;
+        margin-bottom: 85px;
+        line-height: 1.65;
+      }
+      
+      .text-title {
+        font-size: 16px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 65px;
+      }
+      
+      .icon-navigation-right {
+        cursor: pointer;
+      }
+      
+      @media(min-width: $screen-md) {
+        width: 45%;
+        padding: 0 15px;
+      }
+    }
+
     @media(min-width: $screen-md) {
       flex-direction: row;
     }
@@ -120,9 +149,5 @@
       max-width: 1200px;
       margin: 0 auto;
     }
-  }
-
-  @media(min-width: $screen-md) {
-    padding-bottom: 0;
   }
 }
