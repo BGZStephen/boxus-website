@@ -28,6 +28,28 @@
     }
 
     .container-md-70 {
+      #services-container {
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background:rgba(white, 0);
+          transition: 0.2s ease all;
+          z-index: 100;
+        }
+
+        &.transitioning {
+          &::after {
+            background:rgba(white, 0.8);
+          }
+        }
+      }
+
       .content {
         background: white;
         color: $font-purple;

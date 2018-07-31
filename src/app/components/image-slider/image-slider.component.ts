@@ -19,7 +19,6 @@ export class ImageSlider {
   activeImage: number = 0;
 
   getSliderStyle = (): object => {
-    console.log('working')
     return {
       width: `${25 * this.images.length}%`,
       right: `${25 * this.activeImage}%`

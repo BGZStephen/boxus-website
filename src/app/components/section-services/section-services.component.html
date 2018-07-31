@@ -8,27 +8,12 @@
       </div>
     </div>
     <div class="container container-md-70">
-      <div class="content">
-        <div class="icon icon-navigation-right"></div>
-        <div class="text-block">
-          <div class="icon icon-square"></div>
-          <h3>Branding</h3>
-          <p>Bacon ipsum dolor amet meatloaf porchetta boudin, capicola swine kevin tail chuck bacon.</p>
-        </div>
-        <div class="text-block">
-          <div class="icon icon-triangle"></div>
-          <h3>Mobile Apps</h3>
-          <p>Bacon ipsum dolor amet meatloaf porchetta boudin, capicola swine kevin tail chuck bacon.</p>
-        </div>
-        <div class="text-block">
-          <div class="icon icon-circle"></div>
-          <h3>Web</h3>
-          <p>Bacon ipsum dolor amet meatloaf porchetta boudin, capicola swine kevin tail chuck bacon.</p>
-        </div>
-        <div class="text-block">
-          <div class="icon icon-cross"></div>
-          <h3>Graphic</h3>
-          <p>Bacon ipsum dolor amet meatloaf porchetta boudin, capicola swine kevin tail chuck bacon.</p>
+      <div id="services-container" class="content">
+        <div class="icon icon-navigation-right" (click)="nextServices()"></div>
+        <div class="text-block" *ngFor="let service of servicesSubset">
+          <div class="{{service.icon}}"></div>
+          <h3>{{service.label}}</h3>
+          <p>{{service.description}}</p>
         </div>
       </div>
     </div>
