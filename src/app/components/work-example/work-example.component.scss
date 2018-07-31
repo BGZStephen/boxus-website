@@ -1,0 +1,111 @@
+@import '../../styles/base/variables';
+
+#work-example {
+  background: url('/assets/images/background_img_05b.jpg');
+  background-size: cover;
+  padding: 160px 0;
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+
+    .icon-container {
+      background: lighten($brand-purple, 5%);
+      cursor: pointer;
+      padding: 8px;
+      position: absolute;
+      top: -67px;
+      left: 50%;
+      transform: translateX(-50%);
+      
+      @media(min-width: $screen-md) {
+        transform: none;
+        left: auto;
+        right: -67px;
+      }
+    }
+
+    .text-container {
+      background: white;
+      color: $brand-purple;
+      font-size: 20px;
+      padding: 55px 15px 30px 15px;
+      width: 100%;
+      line-height: 1.65;
+
+      &.align-right {
+        @media(min-width: $screen-md) {
+          text-align: right;
+        }
+      }
+      
+      > p {
+        margin-bottom: 35px;
+      }
+
+      span {
+        color: #777;
+        display: flex;
+
+        p {
+          color: $brand-purple;
+          margin-left: 5px;
+        }
+      }
+
+      button {
+        border: 2px solid $brand-pink;
+        background: white;
+        color: $brand-pink;
+        cursor: pointer;
+        font-weight: bolder;
+        margin-top: 55px;
+        padding: 15px 45px;
+        text-transform: uppercase;
+        transition: 0.2s ease all;
+        width: auto;
+
+        &:hover,
+        &:focus {
+          background: $brand-pink;
+          color: white;
+        }
+      }
+
+      &.text-container-md-50 {
+        @media(min-width: $screen-md) {
+          padding: 55px;
+          width: 50%;
+        }
+      }
+    }
+
+    .image-container {
+      width: 100%;
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      &.image-container-50 {
+        img {
+          display: block;
+          width: 100%;
+        }
+        width: 50%;
+      }
+    }
+
+    
+    @media(min-width: $screen-lg) {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media(min-width: $screen-md) {
+    padding: 240px 0 160px 0;
+  }
+}
