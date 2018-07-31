@@ -112,11 +112,13 @@
       }
     }
 
-    .quote-container {
+    #quote-container {
       margin-top: 160px;
       padding: 0 50px;
       color: white;
       width: 100%;
+      position: relative;
+      transition: 0.2s ease color;
       
       .text-body {
         font-size: 22px;
@@ -133,6 +135,10 @@
       
       .icon-navigation-right {
         cursor: pointer;
+      }
+
+      &.transitioning {
+        color: rgba(white, 0);
       }
       
       @media(min-width: $screen-md) {

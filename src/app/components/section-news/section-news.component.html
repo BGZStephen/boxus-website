@@ -62,14 +62,14 @@
     </div>
   </div>
   <div class="content">
-    <div class="quote-container">
+    <div id="quote-container">
       <div class="text-body">
-        <p>The difference between a Designer and Developer, when it comes to design skills, is the difference between shooting a bullet and throwing it.</p>
+        <p>{{quotes[quoteIndex].text}}</p>
       </div>
       <div class="text-title">
-        <p>Scott Hanselman</p>
+        <p>{{quotes[quoteIndex].author}}</p>
       </div>
-      <div class="icon icon-navigation-right"></div>
+      <div class="icon icon-navigation-right" (click)="nextQuote()"></div>
     </div>
   </div>
 </div>
