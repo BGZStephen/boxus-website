@@ -26,7 +26,8 @@
       }
     }
 
-    #about-primary-image-container {
+    #about-primary-image-container,
+    #team-member-image-container {
       position: relative;
 
       &::after {
@@ -36,14 +37,14 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background:rgba(white, 0);
+        background:rgba($brand-purple, 0);
         transition: 0.1s ease all;
         z-index: 20;
       }
 
       &.transitioning {
         &::after {
-          background:rgba(white, 1);
+          background:rgba($brand-purple, .8);
         }
       }
     }
