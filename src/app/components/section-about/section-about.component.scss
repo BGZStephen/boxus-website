@@ -26,6 +26,28 @@
       }
     }
 
+    #about-primary-image-container {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:rgba(white, 0);
+        transition: 0.1s ease all;
+        z-index: 20;
+      }
+
+      &.transitioning {
+        &::after {
+          background:rgba(white, 1);
+        }
+      }
+    }
+
     .container-md-70 {
       > .content {
         .text-container {
@@ -113,6 +135,8 @@
             position: absolute;
             top: 20px;
             left: 20px;
+            z-index: 25;
+            cursor: pointer;
           }
 
           img {
@@ -123,8 +147,6 @@
 
           &.image-container-md-45 {
             > .icon-navigation-right {
-              position: absolute;
-              top: auto;
               bottom: 20px;
               left: 20px;
             }
