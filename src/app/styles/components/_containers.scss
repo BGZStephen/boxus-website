@@ -11,6 +11,7 @@
 
 .row {
   display: flex;
+  flex-wrap: wrap
 }
 
 .container {
@@ -61,6 +62,12 @@
   &.image-container-50 {
     width: 50%;
   }
+
+  &.image-container-md-45 {
+    @media(min-width: $screen-md) {
+      width: 45%;
+    }
+  }
 }
 
 .text-container {
@@ -69,5 +76,11 @@
   &.text-container-white {
     background: white;
     color: $brand-purple;
+  }
+
+  &.text-container-md-55 {
+    @media(min-width: $screen-md) {
+      width: 55%;
+    }
   }
 }

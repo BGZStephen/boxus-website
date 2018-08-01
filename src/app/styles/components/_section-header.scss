@@ -69,6 +69,7 @@
   }
 
   &.section-header-pink {
+    background: $brand-pink;
     p {
       color: darken($brand-pink, 15%);
     }
@@ -82,6 +83,7 @@
   }
 
   &.section-header-orange {
+    background: $brand-orange;
     p {
       color: darken($brand-orange, 15%);
     }

@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-import _ from 'lodash';
 
 @Component({
   selector: 'app-section-services',

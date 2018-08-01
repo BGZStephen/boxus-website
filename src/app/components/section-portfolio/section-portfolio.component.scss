@@ -7,134 +7,105 @@
   background-position: top center;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   padding-bottom: 160px;
-  width: 100%;
   
-  > .content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    .container-md-30 {
-      order: 0;
-      .label {
-        p {
-          color: darken($brand-orange, 15%);
-        }
-
-        @media(min-width: $screen-md) {
-          position: sticky;
-          top: 64px;
-        }
-      }
-
-      @media(min-width: $screen-md) {
-        order: 1;
-      }
-    }
-
-    .container-offset-50 {
-      width: 100%;
-      .content {
-        cursor: pointer;
-        padding: 20px 0;
-        text-align: center;
-
-        p {
-          text-transform: uppercase;
-          font-size: 22px;
-          font-family: $font-family-heading;
-          margin: 0 0 15px 0;
-          width: 100%
-        }
-
-        .icon-infinity {
-          width: 55px;
-          height: 30px;
-          margin: 0 auto;
-        }
-      }
-
-      @media(min-width: $screen-md) {
-        margin-left: 50%;
-        width: 50%;
-      }
-    }
-
-    .container-md-70 {
+  .container-md-30 {
+    order: 0;
+    @media(min-width: $screen-md) {
       order: 1;
-      > .content {
-        .image-container {
-          cursor: pointer;
-          position: relative;
-          width: 100%;
-          img {
-            display: block;
-            width: 100%;
-          }
+    }
 
-          &.image-container-50 {
-            width: 50%;
-          }
+    .section-header {
+      position: sticky;
+      top: 64px;
+    }
+  }
 
-          .overlay {
-            display: none;
-          }
+  .container-offset-50 {
+    width: 100%;
+    .load-more-container {
+      background: $brand-pink;
+      color: white;
+      cursor: pointer;
+      padding: 20px 0;
+      text-align: center;
 
-          @media(min-width: $screen-md) {
-            .overlay {
-              background: white;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              position: absolute;
-              transition: 0.3s ease opacity;
-              opacity: 0;
-              top: 30px;
-              left: 30px;
-              right: 30px;
-              bottom: 30px;
-
-              img {
-                width: 35px;
-                height: 35px;
-                margin-bottom: 15px;
-              }
-
-              strong {
-                font-size: 22px;
-                font-family: $font-family-heading;
-                letter-spacing: 3px;
-                text-transform: uppercase;
-                margin-bottom: 10px;
-              }
-
-              p {
-                color: #777;
-              }
-            }
-            &:hover {
-              .overlay {
-                opacity: 1;
-              }
-            }
-          }
-        }
+      p {
+        text-transform: uppercase;
+        font-size: 22px;
+        font-family: $font-family-heading;
+        margin: 0 0 15px 0;
+        width: 100%
       }
 
-      @media(min-width: $screen-md) {
-        order: 0;
+      .icon-infinity {
+        width: 55px;
+        height: 30px;
+        margin: 0 auto;
       }
     }
 
     @media(min-width: $screen-md) {
-      flex-direction: row;
+      margin-left: 50%;
+      width: 50%;
+    }
+  }
+
+  .container-md-70 {
+    display: flex;
+    flex-wrap: wrap;
+    order: 1;
+    .image-container {
+      cursor: pointer;
+      position: relative;
+
+      .overlay {
+        display: none;
+      }
+
+      @media(min-width: $screen-md) {
+        .overlay {
+          background: white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          transition: 0.3s ease opacity;
+          opacity: 0;
+          top: 30px;
+          left: 30px;
+          right: 30px;
+          bottom: 30px;
+
+          img {
+            width: 35px;
+            height: 35px;
+            margin-bottom: 15px;
+          }
+
+          strong {
+            font-size: 22px;
+            font-family: $font-family-heading;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+          }
+
+          p {
+            color: #777;
+          }
+        }
+        &:hover {
+          .overlay {
+            opacity: 1;
+          }
+        }
+      }
     }
 
-    @media(min-width: $screen-lg) {
-      max-width: 1200px;
-      margin: 0 auto;
+    @media(min-width: $screen-md) {
+      order: 0;
     }
   }
 
