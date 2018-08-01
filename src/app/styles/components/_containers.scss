@@ -1,0 +1,73 @@
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+
+  @media(min-width: $screen-lg) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.row {
+  display: flex;
+}
+
+.container {
+  width: 100%;
+}
+
+.container-50 {
+  width: 50%;
+}
+
+.container-md-30 {
+  @media(min-width: $screen-md) {
+    width: 30%;
+  }
+}
+
+.container-md-50 {
+  @media(min-width: $screen-md) {
+    width: 50%;
+  }
+}
+
+.container-md-70 {
+  @media(min-width: $screen-md) {
+    width: 70%;
+  }
+
+  &.offset-top {
+    @media(min-width: $screen-md) {        
+      padding-top: 270px;
+    }
+
+    @media(min-width: $screen-lg) {
+      padding-top: 360px;
+    }
+  }
+}
+
+.image-container {
+  width: 100%;
+  
+  img {
+    display: block;
+    width: 100%;
+
+  }
+
+  &.image-container-50 {
+    width: 50%;
+  }
+}
+
+.text-container {
+  color: white;
+  
+  &.text-container-white {
+    background: white;
+    color: $brand-purple;
+  }
+}

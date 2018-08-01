@@ -1,19 +1,21 @@
 <div id="section-services">
   <div class="content">
-    <div class="container container-md-30">
-      <div class="label label--green">
-        <p>01</p>
-        <h2>Services</h2>
-        <div class="icon icon-navigation-right"></div>
+    <div class="row">
+      <div class="container container-md-30">
+        <div class="section-header section-header-green">
+          <p>01</p>
+          <h2>Services</h2>
+          <div class="icon icon-navigation-right"></div>
+        </div>
       </div>
-    </div>
-    <div class="container container-md-70">
-      <div id="services-container" class="content">
-        <div class="icon icon-navigation-right" (click)="nextServices()"></div>
-        <div class="text-block" *ngFor="let service of servicesSubset">
-          <div class="{{service.icon}}"></div>
-          <h3>{{service.label}}</h3>
-          <p>{{service.description}}</p>
+      <div class="container container-md-70 offset-top">
+        <div id="services-container" class="text-container text-container-white">
+          <div class="icon icon-navigation-right" (click)="nextServices()"></div>
+          <div class="text-block" *ngFor="let service of servicesSubset">
+            <div class="{{service.icon}}"></div>
+            <h3>{{service.label}}</h3>
+            <p>{{service.description}}</p>
+          </div>
         </div>
       </div>
     </div>

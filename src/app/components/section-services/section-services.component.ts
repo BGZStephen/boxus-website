@@ -4,7 +4,7 @@ import _ from 'lodash';
 @Component({
   selector: 'app-section-services',
   templateUrl: './section-services.component.html',
-  styleUrls: ['./section-services.component.scss', '../../styles/components/_section.scss']
+  styleUrls: ['./section-services.component.scss']
 })
 export class SectionServices {
   services = [

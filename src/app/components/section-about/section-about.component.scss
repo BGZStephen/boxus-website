@@ -13,19 +13,6 @@
   
   > .content {
     width: 100%;
-    .container-md-30 {
-      .label {
-        p {
-          color: darken($brand-pink, 15%);
-        }
-
-        @media(min-width: $screen-md) {
-          position: sticky;
-          top: 64px;
-        }
-      }
-    }
-
     #about-primary-image-container,
     #team-member-image-container {
       position: relative;
