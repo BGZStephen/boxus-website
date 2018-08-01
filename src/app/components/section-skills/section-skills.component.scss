@@ -10,191 +10,158 @@
   padding-bottom: 160px;
   width: 100%;
   
-  > .content {
+  .container-md-30 {
+    order: 0;
+    @media(min-width: $screen-md) {
+      order: 1;
+    }
+  }
+
+  .container-md-70 {
+    order: 1;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    .container-md-30 {
-      order: 0;
-      .label {
-        p {
-          color: darken($brand-green, 15%);
-        }
-
+    .text-container {
+      padding: 0 15px 15px 15px;
+      background: white;
+      color: $brand-purple;
+      position: relative;
+      overflow: hidden;
+      
+      h3 {
+        font-size: 64px;
+        text-transform: uppercase;
+        text-align: center;
+        
         @media(min-width: $screen-md) {
-          position: sticky;
-          top: 64px;
+          position: relative;
+          top: -110px;
+          margin-bottom: -110px;
+          font-size: 190px;
         }
       }
+      
+      .text-block {
+        margin-bottom: 30px;
+        strong.block {
+          display: block;
+          margin-bottom: 5px;
+          width: 100%;
+          
+          @media(min-width: $screen-md) {
+            margin-top: 25px;
+          }   
+        }
+
+        p {
+          line-height: 1.65;
+        }
+      }
+
       @media(min-width: $screen-md) {
-        order: 1;
+        padding: 0 55px 55px 55px;
       }
     }
 
-    .container-md-70 {
-      order: 1;
-      > .content {
-        background: white;
-        padding: 0 15px 15px 15px;
-        display: flex;
-        flex-direction: column;
-        .text-container {
-          color: $brand-purple;
+    .progress-bars-container {
+      width: 100%;
+      .progress-bar {
+        margin-bottom: 15px;
+        position: relative;
+        overflow: hidden;
+
+        > p {
+          left: 5px;
+          font-size: 22px;
+          font-weight: bolder;
+          padding: 5px 0;
           position: relative;
-          overflow: hidden;
+          left: -5px;
+          transition: 0.2s ease all;
           
-          h3 {
-            font-size: 64px;
-            text-transform: uppercase;
-            text-align: center;
+          @media(min-width: $screen-md) {
+            font-size: 36px;
+          }
+        }
+
+        > p.pull-right {
+          left: calc(100% - 30px);
+          position: absolute;
+          top: 0;
+          
+          @media(min-width: $screen-md) {
+            left: calc(100% - 55px);
+          }
+        }
+
+        &:hover {
+          > p {
+            left: 5px;
+            color: white !important;
+          }
+
+          > p.pull-right {
+            left: calc(100% - 50px);
+            color: white;
             
             @media(min-width: $screen-md) {
-              position: relative;
-              top: -110px;
-              margin-bottom: -110px;
-              font-size: 190px;
+              left: calc(100% - 72px);
             }
-          }
-          
-          .text-block {
-            width: 100%;
-            margin-bottom: 30px;
-            strong.block {
-              display: block;
-              margin-bottom: 5px;
-              width: 100%;
-              
-              @media(min-width: $screen-md) {
-                margin-top: 25px;
-              }   
-            }
+          } 
+        }
 
-            p {
-              line-height: 1.65;
-            }
-          }
+        &.progress-bar-81 {
+          width: 81%;
+        }
 
-          &.text-container-md-55 {
-            @media(min-width: $screen-md) {
-              width: 55%;
-            }
+        &.progress-bar-93 {
+          width: 93%;
+        }
+
+        &.progress-bar-72 {
+          width: 72%;
+        }
+
+        &.progress-bar-99 {
+          width: 99%;
+        }
+
+        &.progress-bar--green {
+          background: $brand-green;
+          > p {
+            color: darken($brand-green, 20%)
           }
         }
 
-        .progress-bars-container {
-          width: 100%;
-          .progress-bar {
-            margin-bottom: 15px;
-            position: relative;
-            overflow: hidden;
-
-            > p {
-              left: 5px;
-              font-size: 22px;
-              font-weight: bolder;
-              padding: 5px 0;
-              position: relative;
-              left: -5px;
-              transition: 0.2s ease all;
-              
-              @media(min-width: $screen-md) {
-                font-size: 36px;
-              }
-            }
-
-            > p.pull-right {
-              left: calc(100% - 30px);
-              position: absolute;
-              top: 0;
-              
-              @media(min-width: $screen-md) {
-                left: calc(100% - 55px);
-              }
-            }
-
-            &:hover {
-              > p {
-                left: 5px;
-                color: white !important;
-              }
-  
-              > p.pull-right {
-                left: calc(100% - 50px);
-                color: white;
-                
-                @media(min-width: $screen-md) {
-                  left: calc(100% - 72px);
-                }
-              } 
-            }
-
-            &.progress-bar-81 {
-              width: 81%;
-            }
-
-            &.progress-bar-93 {
-              width: 93%;
-            }
-
-            &.progress-bar-72 {
-              width: 72%;
-            }
-
-            &.progress-bar-99 {
-              width: 99%;
-            }
-
-            &.progress-bar--green {
-              background: $brand-green;
-              > p {
-                color: darken($brand-green, 20%)
-              }
-            }
-
-            &.progress-bar--orange {
-              background: $brand-orange;
-              > p {
-                color: darken($brand-orange, 20%)
-              }
-            }
-
-            &.progress-bar--pink {
-              background: $brand-pink;
-              > p {
-                color: darken($brand-pink, 20%)
-              }
-            }
-
-            &.progress-bar--blue {
-              background: $brand-blue;
-              > p {
-                color: darken($brand-blue, 20%)
-              }
-            }
-
+        &.progress-bar--orange {
+          background: $brand-orange;
+          > p {
+            color: darken($brand-orange, 20%)
           }
-
         }
-        @media(min-width: $screen-md) {
-          padding: 0 55px 55px 55px;
-        }
-      }
 
-      @media(min-width: $screen-md) {
-        order: 0;
+        &.progress-bar--pink {
+          background: $brand-pink;
+          > p {
+            color: darken($brand-pink, 20%)
+          }
+        }
+
+        &.progress-bar--blue {
+          background: $brand-blue;
+          > p {
+            color: darken($brand-blue, 20%)
+          }
+        }
       }
     }
 
     @media(min-width: $screen-md) {
-      flex-direction: row;
+      order: 0;
     }
-
-    @media(min-width: $screen-lg) {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+    
   }
-
+  
   @media(min-width: $screen-md) {
     padding-bottom: 0;
   }
