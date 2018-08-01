@@ -73,6 +73,8 @@
 
 .text-container {
   color: white;
+  display: flex;
+  flex-wrap: wrap;
   
   &.text-container-white {
     background: white;
@@ -84,4 +86,13 @@
       width: 55%;
     }
   }
+
+  .text-block { 
+    &.text-block-md-50 {
+      @media(min-width: $screen-md) {
+        width: 50%;
+      }    
+    }
+  }
+
 }

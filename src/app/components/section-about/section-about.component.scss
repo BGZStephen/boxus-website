@@ -97,6 +97,10 @@
             padding-right: 70px;
           }    
         }
+
+        @media(min-width: $screen-md) {
+          padding-right: 55px;
+        }
       }
 
       @media(min-width: $screen-md) {
