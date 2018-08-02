@@ -75,6 +75,7 @@
   color: white;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   
   &.text-container-white {
     background: white;
@@ -84,6 +85,12 @@
   &.text-container-md-55 {
     @media(min-width: $screen-md) {
       width: 55%;
+    }
+  }
+
+  &.text-container-md-50 {
+    @media(min-width: $screen-md) {
+      width: 50%;
     }
   }
 

@@ -6,11 +6,6 @@
   padding: 160px 0;
   
   .content {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    width: 100%;
-
     .icon-container {
       background: lighten($brand-purple, 5%);
       cursor: pointer;
@@ -28,11 +23,10 @@
     }
 
     .text-container {
-      background: white;
-      color: $brand-purple;
+      flex-direction: column;
+      align-items: flex-start;
       font-size: 20px;
       padding: 55px 15px 30px 15px;
-      width: 100%;
       line-height: 1.65;
 
       &.align-right {
@@ -77,31 +71,8 @@
       &.text-container-md-50 {
         @media(min-width: $screen-md) {
           padding: 55px;
-          width: 50%;
         }
       }
-    }
-
-    .image-container {
-      width: 100%;
-      img {
-        display: block;
-        width: 100%;
-      }
-
-      &.image-container-50 {
-        img {
-          display: block;
-          width: 100%;
-        }
-        width: 50%;
-      }
-    }
-
-    
-    @media(min-width: $screen-lg) {
-      max-width: 1200px;
-      margin: 0 auto;
     }
   }
   
