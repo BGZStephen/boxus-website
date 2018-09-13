@@ -1,15 +1,15 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, OnDestroy } from "@angular/core";
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class Navbar implements OnInit {
+export class Navbar implements OnInit, OnDestroy {
   navVisible: boolean = false;
   navHeight: number = 0;
   navElementHeight: number = 0;
-  activeNavItem: object = {
+  activeNavItem: any = {
     label: "Home",
     id: "home",
     bgColor: "purple",
@@ -62,6 +62,10 @@ export class Navbar implements OnInit {
   ngOnInit(): void {
     window.addEventListener('scroll', this.checkForColorchange, true);
     this.setNavHeight();
+  }
+
+  ngOnDestroy() {
+    window.removeEventListener('scroll', this.checkForColorchange, true);
   }
 
   checkForColorchange = (): void => {
