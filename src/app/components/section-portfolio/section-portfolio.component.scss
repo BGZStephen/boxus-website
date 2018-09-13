@@ -5,19 +5,11 @@
   background-image: url('/assets/images/background_img_02.jpg');
   background-size: cover;
   background-position: top center;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 160px;
   
   .container-md-30 {
     order: 0;
     @media(min-width: $screen-md) {
       order: 1;
-    }
-
-    .section-header {
-      position: sticky;
-      top: 64px;
     }
   }
 
@@ -107,9 +99,5 @@
     @media(min-width: $screen-md) {
       order: 0;
     }
-  }
-
-  @media(min-width: $screen-md) {
-    padding-bottom: 0;
   }
 }

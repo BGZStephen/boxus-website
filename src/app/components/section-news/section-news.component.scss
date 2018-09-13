@@ -5,28 +5,10 @@
   background-image: url('/assets/images/background_img_04.jpg');
   background-size: cover;
   background-position: top center;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 160px;
-  width: 100%;
 
-  .content {
-    width: 100%;
-  }
-  
   .container-md-30 {
     order: 0;
-    .label {
-      p {
-        color: darken($brand-green, 15%);
-      }
-
-      @media(min-width: $screen-md) {
-        position: sticky;
-        top: 64px;
-      }
-    }
-
+   
     @media(min-width: $screen-md) {
       order: 1;
     }
